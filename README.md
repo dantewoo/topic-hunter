@@ -6,7 +6,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/版本-v2.1.0-blue" alt="version" />
-  <img src="https://img.shields.io/badge/平台-WorkBuddy_Skill-green" alt="platform" />
+  <img src="https://img.shields.io/badge/平台-_Skill-green" alt="platform" />
   <img src="https://img.shields.io/badge/评分-4维等权-orange" alt="scoring" />
 </p>
 
@@ -14,7 +14,7 @@
 
 ## 这是什么
 
-Topic Hunter 是一个 [WorkBuddy Skill](https://www.codebuddy.cn/docs/workbuddy/Overview)，帮你从近 3 天的信息洪流里，筛出最值得做、最可能爆的选题。
+Topic Hunter 是一个 [Skill](https://www.codebuddy.cn/docs//Overview)，帮你从近 3 天的信息洪流里，筛出最值得做、最可能爆的选题。
 
 **它不罗列新闻，它帮你做内容决策。**
 
@@ -96,15 +96,15 @@ Topic Hunter 是一个 [WorkBuddy Skill](https://www.codebuddy.cn/docs/workbuddy
 
 ### 安装
 
-将本仓库克隆到 WorkBuddy 的 skills 目录：
+将本仓库克隆到 skills 目录：
 
 ```bash
-git clone https://github.com/dantewoo/topic-hunter.git ~/.workbuddy/skills/topic
+git clone https://github.com/dantewoo/topic-hunter.git ~/./skills/topic
 ```
 
 ### 使用
 
-在 WorkBuddy 中说：
+在  中说：
 
 - **"选题"** — 启动交互，选择领域/形态/受众
 - **"选题 科技"** — 跳过交互，直接按科技/AI搜索
@@ -139,7 +139,7 @@ git clone https://github.com/dantewoo/topic-hunter.git ~/.workbuddy/skills/topic
 
 ```
 topic-hunter/
-├── SKILL.md                  # 主流程入口（WorkBuddy 读取）
+├── SKILL.md                  # 主流程入口（ 读取）
 ├── README.md                 # 本文件
 ├── prompts/
 │   ├── interaction.md        # 交互层话术
