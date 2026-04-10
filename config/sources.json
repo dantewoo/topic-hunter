@@ -1,0 +1,110 @@
+{
+  "search_templates": {
+    "description": "搜索词模板。{date} 会在运行时替换为当前具体日期（如 4月9日），{year_month} 替换为年月（如 2026年4月），{fresh} 替换为 fresh_keywords 中的一个",
+    "templates": [
+      "{keyword} {date}",
+      "{keyword} {fresh}",
+      "{keyword} {year_month}"
+    ]
+  },
+  "sources": {
+    "科技/AI": {
+      "keywords": ["AI", "人工智能", "科技", "芯片", "大模型", "科技发布", "科技公司"],
+      "public_keywords": ["AI又出事了", "手机今天", "苹果最新", "AI刚刚", "机器人来了", "AI替代工作", "人工智能最新"],
+      "cross_keywords": ["AI 赚钱 意外", "科技 股价 暴涨", "AI 传统行业 反转", "芯片 战争 武器", "AI 被骗 安全"],
+      "fresh_keywords": ["刚刚发布", "今天宣布", "刚刚曝光", "最新消息", "突发"],
+      "sites": [
+        {"name": "36氪", "url": "36kr.com", "type": "web_search", "search_prefix": "site:36kr.com"},
+        {"name": "IT之家", "url": "ithome.com", "type": "web_search", "search_prefix": "site:ithome.com"},
+        {"name": "TechCrunch", "url": "techcrunch.com", "type": "web_search", "search_prefix": "site:techcrunch.com"},
+        {"name": "Hacker News", "url": "news.ycombinator.com", "type": "web_search", "search_prefix": "site:news.ycombinator.com"},
+        {"name": "TechMeme", "url": "techmeme.com", "type": "web_search", "search_prefix": "site:techmeme.com"}
+      ]
+    },
+    "商业/财经": {
+      "keywords": ["商业", "财经", "投资", "股市", "公司", "创业", "融资"],
+      "public_keywords": ["股票今天", "公司裁员", "房价最新", "哪个行业赚钱", "大厂裁员", "搞钱新门路"],
+      "cross_keywords": ["股票 AI 意外", "战争 经济 赚钱", "小众行业 暴利 科技", "政策 股价 反转", "裁员 AI替代 暗线"],
+      "fresh_keywords": ["刚刚宣布", "今天发布", "刚刚暴跌", "最新政策", "突发"],
+      "sites": [
+        {"name": "华尔街见闻", "url": "wallstreetcn.com", "type": "web_search", "search_prefix": "site:wallstreetcn.com"},
+        {"name": "Bloomberg", "url": "bloomberg.com", "type": "web_search", "search_prefix": "site:bloomberg.com"},
+        {"name": "FT中文网", "url": "ftchinese.com", "type": "web_search", "search_prefix": "site:ftchinese.com"}
+      ]
+    },
+    "社会/民生": {
+      "keywords": ["社会", "民生", "政策", "热点", "事件"],
+      "public_keywords": ["最新政策", "工资上涨", "社保变化", "教育改革", "食品安全", "打工人"],
+      "cross_keywords": ["政策 赚钱 意外", "民生 科技 暗线", "战争 中国制造 赚钱", "突发事件 背后 利益"],
+      "fresh_keywords": ["刚刚发生", "今天出炉", "刚刚通报", "最新进展", "紧急通知"],
+      "sites": [
+        {"name": "微博热搜", "url": "https://s.weibo.com/top/summary", "type": "browser", "extract_rule": "提取热搜榜话题列表和热度"},
+        {"name": "澎湃新闻", "url": "thepaper.cn", "type": "web_search", "search_prefix": "site:thepaper.cn"}
+      ]
+    },
+    "娱乐/文化": {
+      "keywords": ["娱乐", "明星", "综艺", "电影", "文化"],
+      "public_keywords": ["谁又塌房了", "票房", "综艺最新", "明星翻车", "新片上映"],
+      "cross_keywords": ["明星 赚钱 意外", "娱乐 资本 暗线", "网红 生意 反转"],
+      "fresh_keywords": ["刚刚爆出", "今天官宣", "刚刚回应", "最新瓜", "突发"],
+      "sites": [
+        {"name": "微博娱乐榜", "url": "https://s.weibo.com/top/summary", "type": "browser", "extract_rule": "提取娱乐类热搜话题和热度"},
+        {"name": "抖音热点", "url": "https://www.douyin.com/hot", "type": "browser", "extract_rule": "提取热点榜话题列表和热度值"}
+      ]
+    },
+    "游戏/二次元": {
+      "keywords": ["游戏", "二次元", "新游", "电竞"],
+      "public_keywords": ["新游戏上线", "游戏封号", "电竞夺冠", "游戏联动", "爆款手游"],
+      "cross_keywords": ["游戏 赚钱 意外", "电竞 产业 暗线", "游戏 经济 反转"],
+      "fresh_keywords": ["刚刚上线", "今天开服", "刚刚公布", "最新版本", "突发"],
+      "sites": [
+        {"name": "游民星空", "url": "gamersky.com", "type": "web_search", "search_prefix": "site:gamersky.com"}
+      ]
+    },
+    "健康/生活": {
+      "keywords": ["健康", "生活", "心理", "养生"],
+      "public_keywords": ["夏天怎么吃", "减肥新方法", "失眠", "熬夜", "心理问题"],
+      "cross_keywords": ["健康 骗局 意外", "养生 产业 暴利", "心理 AI 暗线"],
+      "fresh_keywords": ["最新研究", "刚刚发现", "今天公布", "最新报告", "突破性"],
+      "sites": [
+        {"name": "少数派", "url": "sspai.com", "type": "web_search", "search_prefix": "site:sspai.com"}
+      ]
+    },
+    "知识/科普": {
+      "keywords": ["科普", "知识", "冷知识", "认知"],
+      "public_keywords": ["原来是这样", "颠覆认知", "被骗了多少年", "新发现", "最新揭秘"],
+      "cross_keywords": ["颠覆认知 意外", "被忽视的真相 利益", "冷知识 赚钱"],
+      "fresh_keywords": ["最新发现", "刚刚揭秘", "最新研究", "首次发现", "新证据"],
+      "sites": []
+    }
+  },
+  "global_hot": {
+    "description": "无论用户选什么领域，以下热榜必须搜索。cn=国内源，global=国际源",
+    "sites": [
+      {"name": "微博热搜", "region": "cn", "url": "https://s.weibo.com/top/summary", "type": "browser", "extract_rule": "提取热搜榜话题列表和热度值"},
+      {"name": "抖音热点", "region": "cn", "url": "https://www.douyin.com/hot", "type": "browser", "extract_rule": "提取热点榜话题列表和热度值"},
+      {"name": "TechMeme", "region": "global", "url": "techmeme.com", "type": "web_search", "search_prefix": "site:techmeme.com", "note": "科技行业信息流聚合，必搜"},
+      {"name": "Google News", "region": "global", "url": "news.google.com", "type": "web_search", "search_prefix": "site:news.google.com"},
+      {"name": "BBC", "region": "global", "url": "bbc.com", "type": "web_search", "search_prefix": "site:bbc.com"},
+      {"name": "Reddit", "region": "global", "url": "reddit.com", "type": "web_search", "search_prefix": "site:reddit.com"}
+    ]
+  },
+  "site_types": {
+    "description": "站点类型说明",
+    "web_search": "使用 web_search 工具，搜索词格式为 '{search_prefix} {关键词} {日期}'，确保搜索结果来自目标站点",
+    "browser": "使用浏览器自动化（Browser Automation skill）打开页面并提取内容。需要登录或有反爬的站点用此类型。执行时先加载 Browser Automation skill，然后打开 URL，按 extract_rule 提取数据",
+    "web_fetch": "仅当确认目标页面可直接抓取有效内容时使用（静态页面、无反爬），否则优先用 web_search 或 browser"
+  },
+  "search_config": {
+    "search_engine": "google",
+    "time_range_days": 3,
+    "min_candidates": 15,
+    "max_candidates": 20,
+    "deep_fetch_top_n": 8,
+    "keywords_per_domain": 3,
+    "public_keywords_per_domain": 2,
+    "cross_keywords_per_domain": 2,
+    "fresh_keywords_per_domain": 2,
+    "description": "每次搜索必须同时使用专业关键词、出圈搜索词(public_keywords)、跨界交叉搜索词(cross_keywords)和时效性搜索词(fresh_keywords)。搜索词必须注入当前具体日期（如 4月9日、2026年4月），避免搜出旧闻。搜索词模板见 search_templates"
+  }
+}
