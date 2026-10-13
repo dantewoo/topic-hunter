@@ -1,1 +1,7 @@
 .DS_Store
+__pycache__/
+
+# 个人数据，不进仓库
+.user_preferences.json
+data/
+_skillhub_meta.json
