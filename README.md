@@ -6,7 +6,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/版本-v2.3.0-blue" alt="version" />
-  <img src="https://img.shields.io/badge/平台-WorkBuddy_Skill-green" alt="platform" />
+  <img src="https://img.shields.io/badge/平台-Agent_Skill-green" alt="platform" />
   <img src="https://img.shields.io/badge/评分-4维加权-orange" alt="scoring" />
 </p>
 
@@ -14,7 +14,7 @@
 
 ## 这是什么
 
-Topic Hunter 是一个 [WorkBuddy Skill](https://www.codebuddy.cn/docs/workbuddy/Overview)，帮你从近几天的信息洪流里，筛出最值得做、最可能爆的选题。
+Topic Hunter 是一个 Agent Skill，帮你从近几天的信息洪流里，筛出最值得做、最可能爆的选题。
 
 **它不罗列新闻，它帮你做内容决策。**
 
@@ -102,21 +102,21 @@ Topic Hunter 是一个 [WorkBuddy Skill](https://www.codebuddy.cn/docs/workbuddy
 
 ### 安装
 
-将本仓库克隆到 WorkBuddy 的 skills 目录：
+将本仓库克隆到你所用 Agent 的 skills 目录（不同平台路径不同，按实际替换）：
 
 ```bash
-git clone https://github.com/dantewoo/topic-hunter.git ~/.workbuddy/skills/topic
+git clone https://github.com/dantewoo/topic-hunter.git <skills目录>/topic
 ```
 
 热榜脚本需要 Python 3.8+，无第三方依赖。可以先单独跑一次确认网络可用：
 
 ```bash
-python3 ~/.workbuddy/skills/topic/scripts/fetch_hotlists.py --limit 5
+python3 <skills目录>/topic/scripts/fetch_hotlists.py --limit 5
 ```
 
 ### 使用
 
-在 WorkBuddy 中说：
+在对话中说：
 
 - **"选题"** — 一条消息选好领域/形态/受众后开始
 - **"选题 科技"** — 跳过领域选择，直接按科技/AI搜索
@@ -171,7 +171,7 @@ python3 ~/.workbuddy/skills/topic/scripts/fetch_hotlists.py --limit 5
 
 ```
 topic-hunter/
-├── SKILL.md                     # 主流程入口（WorkBuddy 读取），所有门控规则在这里
+├── SKILL.md                     # 主流程入口（Agent 读取），所有门控规则在这里
 ├── README.md                    # 本文件
 ├── prompts/
 │   ├── interaction.md           # 交互层话术
